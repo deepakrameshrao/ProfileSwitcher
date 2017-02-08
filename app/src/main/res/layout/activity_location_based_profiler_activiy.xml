@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.deepak.smartprofileswitcher.LocationBasedProfilerActiviy">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/username_text_input_layout"
+        android:layout_below="@id/container_toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/profilename_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter profile name"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/loctitle"
+        android:layout_below="@id/username_text_input_layout"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/locationtitle"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:text="Location" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/currloc"
+        android:layout_below="@id/loctitle"
+        android:layout_marginTop="5dp"
+        android:checked="true"
+        android:textSize="18dp"
+        android:text="Use current location" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/policytitle"
+        android:layout_below="@id/currloc"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/policytitletext"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:text="Policy" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ringvolume"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/policytitle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ringingvolume"
+            android:layout_gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Ringing volume" android:layout_width="140dp"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/ringseekbar"
+            android:layout_gravity="center_vertical"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mediavolume"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/ringvolume"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mediavolumetext"
+            android:layout_gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Media volume" android:layout_width="140dp"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/mediaseekbar"
+            android:layout_gravity="center_vertical"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/savebutton"
+            android:text="Save"
+            android:textSize="16dp"
+            android:background="@color/primaryColor"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/cancelbutton"
+            android:text="Cancel"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:background="@color/primaryColor"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    <!--<LinearLayout
+        android:id="@+id/ringvolume"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/policytitle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ringingvolume"
+            android:layout_gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Ringing volume" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/ringseekbar"
+            android:layout_gravity="center_vertical"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>-->
+
+</RelativeLayout>

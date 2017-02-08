@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainlayout">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentprofilelayout"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        tools:context="com.deepak.smartprofileswitcher.HomeFragment">
+
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="45dp"
+            android:text="HOME"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/ringingvolume"
+            android:layout_below="@id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            android:text="Ringing volume" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:id="@+id/ringingprogress"
+            android:indeterminate="false"
+            android:layout_marginStart="27dp"
+            android:layout_alignTop="@+id/ringingvolume"
+            android:layout_toEndOf="@+id/ringingvolume" />
+
+        <TextView
+            android:id="@+id/mediavolume"
+            android:layout_below="@id/ringingvolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            android:text="Media volume" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:id="@+id/mediaprogress"
+            android:indeterminate="false"
+            android:layout_alignTop="@+id/mediavolume"
+            android:layout_alignStart="@+id/ringingprogress" />
+
+        <TextView
+            android:id="@+id/calls"
+            android:layout_below="@id/mediavolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            android:text="Block Calls" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/checkBox"
+            android:layout_alignBaseline="@id/calls"
+            android:layout_below="@+id/mediavolume"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/sms"
+            android:layout_below="@id/calls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            android:paddingBottom="20dp"
+            android:gravity="left"
+            android:text="Block SMS" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone"
+            android:id="@+id/msgcheckbox"
+            android:layout_alignBaseline="@id/sms"
+            android:layout_below="@+id/calls"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/addprofilelayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/button_material_light"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:src="@android:drawable/ic_input_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/addprofile"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Add Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
